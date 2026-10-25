@@ -1,0 +1,7 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-wholesale" class="s-block sm-block sm-sec">
+<div class="container"><div class="sm-ws">
+ <div class="sm-ws__l"><span class="sm-chip"><svg class="sm-i " aria-hidden="true"><use href="#i-box"/></svg> {{ component.badge }}</span><h2>{{ component.title }}</h2><p>{{ component.description }}</p>
+  <ul>{% for p in component.points %}<li><svg class="sm-i " aria-hidden="true"><use href="#i-check"/></svg> {{ p.text }}</li>{% endfor %}</ul>
+  <a class="sm-btn" href="{{ component.btn_url }}" target="_blank" rel="noopener"><svg class="sm-i " aria-hidden="true"><use href="#i-wa"/></svg> {{ component.btn_text }}</a></div>
+ <div class="sm-ws__r">{% for st in component.stats %}<div class="sm-st"><b>{{ st.value }}</b><small>{{ st.label }}</small></div>{% endfor %}</div>
+</div></div></section>

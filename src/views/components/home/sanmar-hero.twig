@@ -1,0 +1,20 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-hero" class="s-block sm-block sm-hero">
+<div class="container"><div class="sm-hero__grid">
+<div class="sm-hero__main">
+ <div class="sm-hero__text">
+  {% if component.badge %}<span class="sm-chip"><svg class="sm-i " aria-hidden="true"><use href="#i-store"/></svg> {{ component.badge }}</span>{% endif %}
+  {% if position == 0 %}<h1>{{ component.title }} <em>{{ component.highlight }}</em></h1>{% else %}<h2 class="sm-title">{{ component.title }} <em>{{ component.highlight }}</em></h2>{% endif %}
+  {% if component.description %}<p>{{ component.description }}</p>{% endif %}
+  <div class="sm-bt">
+   {% if component.btn1_text %}<a class="sm-btn" href="{{ component.btn1_url }}">{{ component.btn1_text }} <svg class="sm-i " aria-hidden="true"><use href="#i-arrow"/></svg></a>{% endif %}
+   {% if component.btn2_text %}<a class="sm-btn o" href="{{ component.btn2_url }}" target="_blank" rel="noopener"><svg class="sm-i " aria-hidden="true"><use href="#i-wa"/></svg> {{ component.btn2_text }}</a>{% endif %}
+  </div>
+ </div>
+ <div class="sm-vis" aria-hidden="true">
+  <div class="sm-pill a"><svg class="sm-i " aria-hidden="true"><use href="#i-heater"/></svg></div><div class="sm-pill b"><svg class="sm-i " aria-hidden="true"><use href="#i-bolt"/></svg></div><div class="sm-pill c"><svg class="sm-i " aria-hidden="true"><use href="#i-pump"/></svg></div><div class="sm-pill d"><svg class="sm-i " aria-hidden="true"><use href="#i-drop"/></svg></div>
+ </div>
+</div>
+<div class="sm-hero__side">
+ <a class="sm-card a" href="{{ component.c1_url }}"><div class="tx"><small>{{ component.c1_label }}</small><h3>{{ component.c1_title }}</h3><span class="ln">تسوق الآن <svg class="sm-i " aria-hidden="true"><use href="#i-arrow"/></svg></span></div><i class="sm-bi"><svg class="sm-i " aria-hidden="true"><use href="#i-heater"/></svg></i></a>
+ <a class="sm-card b" href="{{ component.c2_url }}"><div class="tx"><small>{{ component.c2_label }}</small><h3>{{ component.c2_title }}</h3><span class="ln">تسوق الآن <svg class="sm-i " aria-hidden="true"><use href="#i-arrow"/></svg></span></div><i class="sm-bi"><svg class="sm-i " aria-hidden="true"><use href="#i-drill"/></svg></i></a>
+</div></div></div></section>

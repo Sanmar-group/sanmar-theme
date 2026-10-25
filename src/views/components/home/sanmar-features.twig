@@ -1,0 +1,7 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-features" class="s-block sm-block sm-sec">
+<div class="container"><div class="sm-feat">
+{% for item in component.items %}
+ {% set smi = ['shield','card','truck','store'] %}
+ <div class="sm-ft"><i><svg class="sm-i" aria-hidden="true"><use href="#i-{{ smi[loop.index0 % 4] }}"/></svg></i><span><b>{{ item.title }}</b><small>{{ item.text }}</small></span></div>
+{% endfor %}
+</div></div></section>

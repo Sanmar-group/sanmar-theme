@@ -1,0 +1,10 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-categories" class="s-block sm-block sm-sec">
+<div class="container">
+ <div class="sm-sh"><h2>{{ component.title }}</h2>{% if component.all_url and component.all_url != '#' %}<a class="sm-more" href="{{ component.all_url }}">كل الأقسام <svg class="sm-i " aria-hidden="true"><use href="#i-arrow"/></svg></a>{% endif %}</div>
+ <div class="sm-cats">
+ {% for cat in component.categories %}
+  {% set smk = 'box' %}{% set smn = cat.name %}{% if 'صحية' in smn or 'حمام' in smn %}{% set smk = 'bath' %}{% elseif 'كهرب' in smn %}{% set smk = 'bolt' %}{% elseif 'لواصق' in smn or 'غراء' in smn %}{% set smk = 'tube' %}{% elseif 'بناء' in smn %}{% set smk = 'brick' %}{% elseif 'يدوية' in smn %}{% set smk = 'hammer' %}{% elseif 'بوية' in smn or 'دهان' in smn or 'كيماو' in smn %}{% set smk = 'bucket' %}{% elseif 'زراع' in smn %}{% set smk = 'leaf' %}{% elseif 'ليات' in smn %}{% set smk = 'pipe' %}{% elseif 'حقائب' in smn or 'شنط' in smn %}{% set smk = 'bag' %}{% elseif 'قفل' in smn or 'أقفال' in smn or 'كوالين' in smn %}{% set smk = 'lock' %}{% elseif 'جملة' in smn %}{% set smk = 'box' %}{% elseif 'سباك' in smn or 'محبس' in smn %}{% set smk = 'valve' %}{% elseif 'فلتر' in smn or 'مياه' in smn %}{% set smk = 'drop' %}{% elseif 'سخان' in smn %}{% set smk = 'heater' %}{% endif %}
+  <a class="sm-cat" href="{{ cat.url }}"><span><svg class="sm-i" aria-hidden="true"><use href="#i-{{ smk }}"/></svg></span>{{ cat.name }}</a>
+ {% endfor %}
+ </div>
+</div></section>

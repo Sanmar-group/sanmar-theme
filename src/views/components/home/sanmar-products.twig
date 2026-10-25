@@ -1,0 +1,8 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-products" class="s-block sm-block sm-sec">
+<div class="container">
+ <div class="sm-sh"><div><h2>{{ component.title }}</h2>{% if component.subtitle %}<p>{{ component.subtitle }}</p>{% endif %}</div>
+ {% if component.display_all_url and component.display_all_url != '#' %}<a class="sm-more" href="{{ component.display_all_url }}">عرض الكل <svg class="sm-i " aria-hidden="true"><use href="#i-arrow"/></svg></a>{% endif %}</div>
+ {% if component.products|length %}
+ <salla-products-list source="selected" source-value="[{{ component.products|map((product) => product.id)|join(',') }}]" limit="12"></salla-products-list>
+ {% endif %}
+</div></section>

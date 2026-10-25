@@ -1,0 +1,3 @@
+<section component-id="{{ componentId }}" data-testid="store-home-sanmar-faq" class="s-block sm-block sm-sec">
+<div class="container"><div class="sm-sh"><h2>{{ component.title }}</h2></div>
+<div class="sm-faq">{% for f in component.items %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div></div></section>

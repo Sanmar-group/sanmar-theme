@@ -80,16 +80,17 @@
     {% hook head %}
     {% block styles %}{% endblock %}
     <link rel="stylesheet" href="{{ 'app.css' | asset }}">
+    <link rel="stylesheet" href="{{ 'sanmar.css' | asset }}">
     <link rel="stylesheet" href="{{ theme.font.path|cdn }}"/>
     <link rel="stylesheet" href="{{ 'fonts/sallaicons.css'|cdn }}"/>
     
     <style>
         :root {
-            --font-main: '{{theme.font.name}}';
-            --color-primary: {{ theme.color.primary }};
-            --color-primary-dark: {{ theme.color.darker(0.15) }};
-            --color-primary-light: {{ theme.color.lighter(0.15) }};
-            --color-primary-reverse: {{ theme.color.reverse_text }};
+            --font-main: 'Ping', Tahoma, sans-serif;
+            --color-primary: #3a8fb3;
+            --color-primary-dark: #25728f;
+            --color-primary-light: #9fd6d2;
+            --color-primary-reverse: #ffffff;
             /* Theme specific variables */
             --s-radius: .75rem;
         }
@@ -108,6 +109,50 @@
        target="_blank">To enable JavaScript on webpage</a>.
 </noscript>
 <div class="app-inner flex flex-col min-h-full">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></symbol>
+<symbol id="i-bucket" viewBox="0 0 24 24"><path d="M4 8h16l-2 12H6zM4 8a8 3 0 0 1 16 0M9 12v4M15 12v4"/></symbol>
+<symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 9h6v6H3zM15 9h6v6h-6zM9 12h6M6 9V5M18 15v4"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-13 15M5 19c2-4 5-7 9-9"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"/></symbol>
+<symbol id="i-tube" viewBox="0 0 24 24"><path d="M8 3h8l-1 5H9zM9 8l-1 11a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2l-1-11M10 13h4"/></symbol>
+<symbol id="i-hammer" viewBox="0 0 24 24"><path d="m14 4 6 6-3 3-6-6zM14 11 5 20l-1-1 9-9M11 7l-3 3"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+<symbol id="i-brick" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 10h18M3 15h18M9 5v5M15 10v5M9 15v4"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></symbol>
+<symbol id="i-valve" viewBox="0 0 24 24"><path d="M2 15h6v-4h8v4h6M8 11V8h8v3M12 8V4M9 4h6"/></symbol>
+<symbol id="i-spray" viewBox="0 0 24 24"><path d="M10 21v-6h4v6zM9 15l-1-4h8l-1 4M12 11V6M7 8 4 6M17 8l3-2M12 3v1"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
+<symbol id="i-coil" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 7v-.01"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.500 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"/></symbol>
+<symbol id="i-heater" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="17" rx="5"/><path d="M10 19v3M14 19v3M10 8h4M10 12h4"/></symbol>
+<symbol id="i-pump" viewBox="0 0 24 24"><rect x="3" y="9" width="11" height="8" rx="2"/><path d="M14 11h4a3 3 0 0 1 3 3v3M7 9V5h4v4M6 17v3M12 17v3"/></symbol>
+<symbol id="i-saw" viewBox="0 0 24 24"><path d="M3 14h12l6-6v6l-6 6H3zM6 14v3M9 14v3M12 14v3M15 14v3"/></symbol>
+<symbol id="i-drill" viewBox="0 0 24 24"><path d="M3 7h12a3 3 0 0 1 3 3v2H3zM15 9h6M9 12v7H6l1-7M12 12v3"/></symbol>
+<symbol id="i-ladder" viewBox="0 0 24 24"><path d="M7 3 5 21M17 3l2 18M6.500 8h11M6 13h12M5.500 18h13"/></symbol>
+<symbol id="i-mesh" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="m3 17 14-14 4 4L7 21zM8 12l2 2M11 9l2 2M14 6l2 2"/></symbol>
+<symbol id="i-socket" viewBox="0 0 24 24"><path d="M12 3l7 4v6l-7 4-7-4V7zM12 9v.01M9 20h6M12 17v3"/></symbol>
+<symbol id="i-manhole" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="6"/><path d="M8 12h8M12 8v8"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h3l2.500 11h10l2-8H7M10 20h.01M17 20h.01"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.500 4.500 0 0 1 8-2.500A4.500 4.500 0 0 1 20 9c0 6-8 11-8 11z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.500 8 8 9 4.500-1 8-4 8-9V6zM9 12l2 2 4-4"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l4 3v3h-8M7 18h.01M18 18h.01"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9 5 4h14l2 5M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6M10 20v-4h4v4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.500-4.500A9 9 0 1 1 8 19.500zM9 9c0 3 3 6 6 6l1.500-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 8h6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</defs></svg>
     {% hook 'body:start' %}
     {% component 'header.header' %}
     <main id="main-content" role="main"{{ (page.slug == 'product.single' or page.slug starts with 'product.index') ? ' class="flex flex-col space-y-8 sm:space-y-16"' : '' }}>
@@ -129,5 +174,6 @@
     <salla-scopes data-testid="store-scopes" selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
 {% block scripts %}{% endblock %}
+<a class="sm-fab" href="https://wa.me/966555792430" target="_blank" rel="noopener" aria-label="واتساب"><svg class="sm-i " aria-hidden="true"><use href="#i-wa"/></svg></a>
 </body>
 </html>
