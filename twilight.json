@@ -1,7 +1,7 @@
 {
     "name": {
-        "ar": "Sanmar Theme",
-        "en": "Sanmar Theme"
+        "ar": "سنمار",
+        "en": "Sanmar"
     },
     "repository": "https://github.com/Sanmar-group/sanmar-theme",
     "author_email": "info@sanmar.sa",
@@ -284,102 +284,1256 @@
     ],
     "components": [
         {
-            "key": "186b3f4f-25cf-4d3c-abca-cef7eed6f0ab",
+            "key": "5682ddfa-98c5-5344-abec-29876e74baf0",
             "title": {
-                "en": "Enhances Animated Images",
-                "ar": " صور متحركة (محسنة)"
+                "en": "Sanmar Hero",
+                "ar": "سنمار: الواجهة الرئيسية"
             },
-            "icon": "sicon-image-carousel",
-            "path": "home.enhanced-slider",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1",
-            "is_default": true,
+            "icon": "sicon-image",
+            "path": "home.sanmar-hero",
+            "image": "",
             "fields": [
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "static-desc",
-                    "value": "<div ><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1'></div>"
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شارة صغيرة",
+                    "multilanguage": true,
+                    "id": "badge",
+                    "value": "سنمار التعمير • الطائف",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "شارة صغيرة",
+                    "minLength": 0,
+                    "maxLength": 200
                 },
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "enhance-slider-note",
-                    "value": "<div >هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "الأدوات الصحية والكهربائية",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
                 },
                 {
-                    "id": "slides",
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "الجزء المميز من العنوان",
+                    "multilanguage": true,
+                    "id": "highlight",
+                    "value": "وكل مستلزمات البناء في مكان واحد",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "الجزء المميز من العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "وصف",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": "سخانات ومضخات وفلاتر وعدد كهربائية، إلى جانب اللواصق ومواد البناء والأدوات اليدوية والدهانات. بضمان وشحن لجميع المدن.",
+                    "required": false,
+                    "format": "textarea",
+                    "description": null,
+                    "placeholder": "وصف",
+                    "minLength": 0,
+                    "maxLength": 300
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر الأول",
+                    "multilanguage": true,
+                    "id": "btn1_text",
+                    "value": "تسوق الأدوات الصحية",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "نص الزر الأول",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر الأول",
+                    "id": "btn1_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر الثاني",
+                    "multilanguage": true,
+                    "id": "btn2_text",
+                    "value": "اطلب تسعيرة",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "نص الزر الثاني",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "رابط الزر الثاني (واتساب)",
+                    "multilanguage": false,
+                    "id": "btn2_url",
+                    "value": "https://wa.me/966555792430",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "رابط الزر الثاني (واتساب)",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البانر الجانبي 1: التصنيف",
+                    "multilanguage": true,
+                    "id": "c1_label",
+                    "value": "أدوات صحية",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "البانر الجانبي 1: التصنيف",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البانر الجانبي 1: العنوان",
+                    "multilanguage": true,
+                    "id": "c1_title",
+                    "value": "سخانات وفلاتر تحلية بضمان",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "البانر الجانبي 1: العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "البانر الجانبي 1: الرابط",
+                    "id": "c1_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البانر الجانبي 2: التصنيف",
+                    "multilanguage": true,
+                    "id": "c2_label",
+                    "value": "كهرباء",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "البانر الجانبي 2: التصنيف",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البانر الجانبي 2: العنوان",
+                    "multilanguage": true,
+                    "id": "c2_title",
+                    "value": "عدد ومضخات وكهربائيات",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "البانر الجانبي 2: العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "البانر الجانبي 2: الرابط",
+                    "id": "c2_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "7a7c2318-6a09-5057-833c-707db748ea5d",
+            "title": {
+                "en": "Sanmar Categories",
+                "ar": "سنمار: دوائر الأقسام"
+            },
+            "icon": "sicon-grid",
+            "path": "home.sanmar-categories",
+            "image": "",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "تسوق حسب القسم",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "رابط كل الأقسام",
+                    "id": "all_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                },
+                {
+                    "id": "categories",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "حدد التصنيفات (رتّبها كما تريد)",
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "categories",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": true,
+                    "minLength": 3
+                }
+            ]
+        },
+        {
+            "key": "5e17bd94-4a91-5a52-b45a-15e2d71e234e",
+            "title": {
+                "en": "Sanmar Trust Strip",
+                "ar": "سنمار: شريط الثقة"
+            },
+            "icon": "sicon-shield-check",
+            "path": "home.sanmar-features",
+            "image": "",
+            "fields": [
+                {
+                    "id": "items",
                     "type": "collection",
                     "format": "collection",
                     "required": true,
-                    "minLength": 1,
-                    "maxLength": 10,
-                    "label": null,
-                    "item_label": "صورة",
+                    "minLength": 2,
+                    "maxLength": 4,
+                    "label": "العناصر",
+                    "item_label": "عنصر",
                     "value": [
                         {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/MopzhoqpTkDObcKc8Q8n77AuydanfsGXdZO7iinH.jpg",
-                            "slides.title": "روِّج لمنتجاتك كصور متحركة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
-                            "slides.without_overlay": false
+                            "items.title": "منتجات أصلية",
+                            "items.text": "علامات تجارية موثوقة"
                         },
                         {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/3gOhYSaIhaHxhH2IHWxJYDl9JHwxP6dGKiZFSq4K.jpg",
-                            "slides.title": "شجّع زوار متجرك على الشراء عبر عروض خاصة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
-                            "slides.without_overlay": false
+                            "items.title": "تقسيط بدون فوائد",
+                            "items.text": "تابي وتمارا"
+                        },
+                        {
+                            "items.title": "شحن سريع",
+                            "items.text": "لجميع مدن المملكة"
+                        },
+                        {
+                            "items.title": "معرض في الطائف",
+                            "items.text": "نخدمك قبل وبعد الشراء"
                         }
                     ],
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-image",
-                            "value": null,
-                            "id": "slides.image",
-                            "label": "صورة البنر",
-                            "format": "image",
-                            "required": true,
-                            "placeholder": null,
-                            "description": "* المقاس المناسب للصورة هو 900×600 بكسل"
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "items.title",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "العنوان",
+                            "minLength": 0,
+                            "maxLength": 40
                         },
                         {
                             "type": "string",
                             "icon": "sicon-format-text-alt",
-                            "label": "عنوان رئيسي",
+                            "label": "الوصف",
                             "multilanguage": true,
-                            "id": "slides.title",
-                            "value": null,
+                            "id": "items.text",
+                            "value": "",
                             "required": false,
                             "format": "text",
-                            "description": "يتم عرضه على الصورة بحجم بارز جداً، مع إضافة تأثير دخول للنص يضيف لمسة جمالية على معرض الصور.",
-                            "placeholder": "يمكنك إضافة عنوان بارز هنا...",
-                            "hide": false,
+                            "description": null,
+                            "placeholder": "الوصف",
                             "minLength": 0,
-                            "maxLength": 100
+                            "maxLength": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "26be41bf-1b28-5ea8-b9fc-a04ff895e315",
+            "title": {
+                "en": "Sanmar Products",
+                "ar": "سنمار: قسم منتجات"
+            },
+            "icon": "sicon-list",
+            "path": "home.sanmar-products",
+            "image": "",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "الأدوات الصحية",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "الوصف القصير",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "value": "سخانات وفلاتر تحلية ومحابس",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "الوصف القصير",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "label": "منتجات",
+                    "id": "products",
+                    "format": "dropdown-list",
+                    "description": null,
+                    "selected": [],
+                    "options": [],
+                    "required": true,
+                    "multichoice": true,
+                    "source": "products",
+                    "searchable": true,
+                    "maxLength": 12,
+                    "minLength": 1,
+                    "value": []
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "رابط عرض الكل",
+                    "id": "display_all_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "cdbb55eb-3b31-5ac1-8f60-4b121c24a617",
+            "title": {
+                "en": "Sanmar Wholesale",
+                "ar": "سنمار: سوق الجملة"
+            },
+            "icon": "sicon-packed-box",
+            "path": "home.sanmar-wholesale",
+            "image": "",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "الشارة",
+                    "multilanguage": true,
+                    "id": "badge",
+                    "value": "سوق الجملة",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "الشارة",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "أسعار خاصة للتجار والمقاولين",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "الوصف",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": "أرسل قائمة احتياجك واحصل على تسعيرة بالكميات. نوفر توريداً منتظماً للمشاريع ومحلات التجزئة.",
+                    "required": false,
+                    "format": "textarea",
+                    "description": null,
+                    "placeholder": "الوصف",
+                    "minLength": 0,
+                    "maxLength": 300
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر",
+                    "multilanguage": true,
+                    "id": "btn_text",
+                    "value": "اطلب تسعيرة عبر واتساب",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "نص الزر",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "رابط الزر",
+                    "multilanguage": false,
+                    "id": "btn_url",
+                    "value": "https://wa.me/966555792430",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "رابط الزر",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "id": "points",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 6,
+                    "label": "المزايا",
+                    "item_label": "ميزة",
+                    "value": [
+                        {
+                            "points.text": "خصومات على الكميات"
+                        },
+                        {
+                            "points.text": "توريد على دفعات"
+                        },
+                        {
+                            "points.text": "فاتورة ضريبية"
+                        },
+                        {
+                            "points.text": "رد خلال ساعات العمل"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "النص",
+                            "multilanguage": true,
+                            "id": "points.text",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "النص",
+                            "minLength": 0,
+                            "maxLength": 40
+                        }
+                    ]
+                },
+                {
+                    "id": "stats",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "minLength": 0,
+                    "maxLength": 4,
+                    "label": "الأرقام",
+                    "item_label": "رقم",
+                    "value": [
+                        {
+                            "stats.value": "1100+",
+                            "stats.label": "منتج متاح"
+                        },
+                        {
+                            "stats.value": "11",
+                            "stats.label": "قسماً رئيسياً"
+                        },
+                        {
+                            "stats.value": "9",
+                            "stats.label": "علامات تجارية"
+                        },
+                        {
+                            "stats.value": "تركيب",
+                            "stats.label": "داخل الطائف للتحلية"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الرقم",
+                            "multilanguage": true,
+                            "id": "stats.value",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "الرقم",
+                            "minLength": 0,
+                            "maxLength": 12
                         },
                         {
                             "type": "string",
-                            "icon": "sicon-typography",
-                            "label": "نص إضافي",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الوصف",
                             "multilanguage": true,
-                            "id": "slides.description",
-                            "value": null,
-                            "description": "يتم عرضه على الصورة بحجم أصغر من العنوان الرئيسي، مع إضافة تأثير دخول للنص يضيف لمسة جمالية على معرض الصور.",
-                            "format": "textarea",
+                            "id": "stats.label",
+                            "value": "",
                             "required": false,
-                            "placeholder": "يمكنك إضافة تفاصيل إضافية هنا",
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "الوصف",
                             "minLength": 0,
-                            "maxLength": 255
+                            "maxLength": 30
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "bbca969c-f350-5d91-a822-fa6c48068364",
+            "title": {
+                "en": "Sanmar Category Tiles",
+                "ar": "سنمار: بطاقات أقسام"
+            },
+            "icon": "sicon-layout-grid",
+            "path": "home.sanmar-tiles",
+            "image": "",
+            "fields": [
+                {
+                    "id": "tiles",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 3,
+                    "label": "البطاقات",
+                    "item_label": "بطاقة",
+                    "value": [
+                        {
+                            "tiles.label": "قسم الزراعة",
+                            "tiles.title": "رشاشات ونقاطات وليات ري"
                         },
                         {
-                            "type": "boolean",
-                            "icon": "sicon-toggle-off",
-                            "label": "إزالة طبقة التعتم",
-                            "description": null,
-                            "id": "slides.without_overlay",
-                            "format": "switch",
+                            "tiles.label": "حقائب المعدات",
+                            "tiles.title": "شنط وحقائب للورش"
+                        },
+                        {
+                            "tiles.label": "كوالين وأقفال",
+                            "tiles.title": "أقفال ومفاتيح وقلوب"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "التصنيف الصغير",
+                            "multilanguage": true,
+                            "id": "tiles.label",
+                            "value": "",
                             "required": false,
-                            "value": false,
-                            "selected": false
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "التصنيف الصغير",
+                            "minLength": 0,
+                            "maxLength": 30
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "tiles.title",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "العنوان",
+                            "minLength": 0,
+                            "maxLength": 50
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-link",
+                            "label": "الرابط",
+                            "id": "tiles.url",
+                            "value": [],
+                            "description": null,
+                            "required": false,
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "منتجات مع وسم",
+                                    "key": "products_tags",
+                                    "value": "products_tags"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "9b3ed7c5-5af0-58a9-b420-459e1075341f",
+            "title": {
+                "en": "Sanmar Guides",
+                "ar": "سنمار: أدلة الشراء"
+            },
+            "icon": "sicon-book",
+            "path": "home.sanmar-guides",
+            "image": "",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "أدلة تساعدك على الشراء",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "رابط كل المقالات",
+                    "id": "all_url",
+                    "value": [],
+                    "description": null,
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 6,
+                    "label": "الأدلة",
+                    "item_label": "دليل",
+                    "value": [
+                        {
+                            "items.title": "كيف تختار محبس المياه المناسب",
+                            "items.text": "الفرق بين المحابس البلاستيكية والنحاسية ومتى تستخدم كل نوع."
+                        },
+                        {
+                            "items.title": "كيف تختار سخان المياه",
+                            "items.text": "السعة والعزل ونظام الأمان وما يناسب عدد أفراد أسرتك."
+                        },
+                        {
+                            "items.title": "متى تستخدم معجون الإيبوكسي",
+                            "items.text": "أشهر استخدامات الإصلاح وسد التسربات وخطوات الخلط الصحيحة."
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "items.title",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "العنوان",
+                            "minLength": 0,
+                            "maxLength": 80
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الوصف",
+                            "multilanguage": true,
+                            "id": "items.text",
+                            "value": "",
+                            "required": false,
+                            "format": "textarea",
+                            "description": null,
+                            "placeholder": "الوصف",
+                            "minLength": 0,
+                            "maxLength": 160
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-link",
+                            "label": "الرابط",
+                            "id": "items.url",
+                            "value": [],
+                            "description": null,
+                            "required": false,
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "منتجات مع وسم",
+                                    "key": "products_tags",
+                                    "value": "products_tags"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "bca03fce-3527-52c5-93a3-fd6449664ef4",
+            "title": {
+                "en": "Sanmar FAQ",
+                "ar": "سنمار: أسئلة شائعة"
+            },
+            "icon": "sicon-question-circle",
+            "path": "home.sanmar-faq",
+            "image": "",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "أسئلة شائعة",
+                    "required": false,
+                    "format": "text",
+                    "description": null,
+                    "placeholder": "العنوان",
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 12,
+                    "label": "الأسئلة",
+                    "item_label": "سؤال",
+                    "value": [
+                        {
+                            "items.q": "هل تشحنون خارج الطائف؟",
+                            "items.a": "نعم، نشحن لجميع مدن المملكة عبر شركات الشحن المتاحة في المتجر."
+                        },
+                        {
+                            "items.q": "هل تتوفر أسعار جملة؟",
+                            "items.a": "نعم، من قسم سوق الجملة أو بطلب تسعيرة عبر واتساب."
+                        },
+                        {
+                            "items.q": "كيف أسترجع منتجاً؟",
+                            "items.a": "تطبق سياسة الاسترجاع المعلنة في المتجر، ويمكنك التواصل معنا لأي استفسار."
+                        },
+                        {
+                            "items.q": "ما طرق الدفع المتاحة؟",
+                            "items.a": "مدى والبطاقات الائتمانية والتقسيط عبر تابي وتمارا."
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "السؤال",
+                            "multilanguage": true,
+                            "id": "items.q",
+                            "value": "",
+                            "required": false,
+                            "format": "text",
+                            "description": null,
+                            "placeholder": "السؤال",
+                            "minLength": 0,
+                            "maxLength": 120
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الجواب",
+                            "multilanguage": true,
+                            "id": "items.a",
+                            "value": "",
+                            "required": false,
+                            "format": "textarea",
+                            "description": null,
+                            "placeholder": "الجواب",
+                            "minLength": 0,
+                            "maxLength": 400
                         }
                     ]
                 }
@@ -647,154 +1801,6 @@
             ]
         },
         {
-            "key": "9a758d20-2ce4-4782-91fe-c04466464588",
-            "title": {
-                "en": "Animated products with a background",
-                "ar": "منتجات متحركة مع خلفية"
-            },
-            "icon": "sicon-list-play",
-            "path": "home.slider-products-with-header",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/slider-products-with-bg.png?v=1.1",
-            "fields": [
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "with-bg",
-                    "value": "<div ><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/slider-products-with-bg.png?v=1.1'></div>"
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-image",
-                    "value": "https://cdn.salla.sa/form-builder/D7bG3pgSit43TheOejBOZV7LIfG1y1Cj0hWLmgIh.jpg",
-                    "label": "صورة الخلفية",
-                    "id": "background",
-                    "format": "image",
-                    "required": true,
-                    "placeholder": null,
-                    "description": "* المقاس المناسب للصورة هو 1233×500 بكسل",
-                    "settings": {
-                        "height": 580,
-                        "width": 1400
-                    }
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "عنوان رئيسي",
-                    "multilanguage": true,
-                    "id": "title",
-                    "value": null,
-                    "required": false,
-                    "format": "text",
-                    "description": null,
-                    "placeholder": "يمكنك إضافة العنوان الرئيسي هنا...",
-                    "hide": false,
-                    "minLength": 0,
-                    "maxLength": "80"
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-typography",
-                    "label": "نص توضيحي",
-                    "multilanguage": true,
-                    "id": "description",
-                    "value": null,
-                    "description": null,
-                    "format": "textarea",
-                    "required": false,
-                    "placeholder": "يمكنك إضافة وصف لهذا القسم هنا...",
-                    "minLength": 0,
-                    "maxLength": "256"
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-keyboard_arrow_down",
-                    "label": "منتجات",
-                    "id": "products",
-                    "format": "dropdown-list",
-                    "description": null,
-                    "selected": [],
-                    "options": [],
-                    "required": true,
-                    "multichoice": true,
-                    "source": "products",
-                    "searchable": true,
-                    "maxLength": 8,
-                    "minLength": 1,
-                    "value": []
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-link",
-                    "label": "رابط عرض الكل",
-                    "id": "display_all_url",
-                    "value": [],
-                    "description": "عند إختيار رابط فارغ سيتم إخفاء زر 'عرض الكل'",
-                    "required": false,
-                    "format": "variable-list",
-                    "searchable": true,
-                    "source": "custom",
-                    "sources": [
-                        {
-                            "label": "منتج",
-                            "key": "products",
-                            "value": "products"
-                        },
-                        {
-                            "label": "منتجات مع وسم",
-                            "key": "products_tags",
-                            "value": "products_tags"
-                        },
-                        {
-                            "label": "تصنيف",
-                            "key": "categories",
-                            "value": "categories"
-                        },
-                        {
-                            "label": "ماركة تجارية",
-                            "key": "brands",
-                            "value": "brands"
-                        },
-                        {
-                            "label": "صفحة تعريفية",
-                            "key": "pages",
-                            "value": "pages"
-                        },
-                        {
-                            "label": "مقالة",
-                            "key": "blog_articles",
-                            "value": "blog_articles"
-                        },
-                        {
-                            "label": "تصنيف ضمن المدونة",
-                            "key": "blog_categories",
-                            "value": "blog_categories"
-                        },
-                        {
-                            "label": "التخفيضات",
-                            "key": "offers_link",
-                            "value": "offers_link"
-                        },
-                        {
-                            "label": "الماركات التجارية",
-                            "key": "brands_link",
-                            "value": "brands_link"
-                        },
-                        {
-                            "label": "المدونة",
-                            "key": "blog_link",
-                            "value": "blog_link"
-                        },
-                        {
-                            "label": "رابط خارجي",
-                            "key": "custom",
-                            "value": "custom"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "key": "b89edc4a-ce0b-468f-8323-2da48147bb32",
             "title": {
                 "en": "Enhanced square images",
@@ -1021,128 +2027,11 @@
                     "source": "brands"
                 }
             ]
-        },
-        {
-            "key": "541cc423-90c7-4230-8a33-a0342cfde4ad",
-            "title": {
-                "en": "Custom testimonials",
-                "ar": "آراء عملاء مخصصة"
-            },
-            "icon": "sicon-chat-bubbles",
-            "path": "home.custom-testimonials",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/custom-testimonials.png?v=1.1",
-            "is_default": true,
-            "fields": [
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "static-desc",
-                    "value": "<div ><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/custom-testimonials.png?v=1.1'></div>"
-                },
-                {
-                    "id": "items",
-                    "key": "0473eb46-c7f5-44c5-bd6f-b1fe716a5e64",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "التقييمات",
-                    "description": null,
-                    "labelHTML": null,
-                    "item_label": "التقييم",
-                    "icon": "sicon-list-add",
-                    "value": [
-                        {
-                            "items.name": "ندى الحسيني",
-                            "items.avatar": "https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png",
-                            "items.stars": 5,
-                            "items.text": "وصلتني اليوم  وطلعت جميلة متحمسة أجربها ❤️"
-                        },
-                        {
-                            "items.name": "خالد الأحمد",
-                            "items.avatar": "https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png",
-                            "items.stars": 5,
-                            "items.text": "اشتريت من هنا لعيالي وصراحة شئ لا يعلى عليه 👏"
-                        },
-                        {
-                            "items.name": "خالد المسعودي",
-                            "items.avatar": "https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png",
-                            "items.stars": 5,
-                            "items.text": "رهيبين يفكون أزمة. 👌"
-                        },
-                        {
-                            "items.name": "عبدالعزيز اليامي",
-                            "items.avatar": "https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png",
-                            "items.stars": 5,
-                            "items.text": "أحب هذا المتجر وتعاملهم الراقي مع العملاء ❤️"
-                        }
-                    ],
-                    "fields": [
-                        {
-                            "id": "items.name",
-                            "key": "04e34d04-d1c3-4b75-b1d6-4e5b4ed22623",
-                            "type": "string",
-                            "format": "text",
-                            "label": "اسم العميل",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "اسم العميل",
-                            "icon": "sicon-format-text-alt",
-                            "value": null,
-                            "multilanguage": false,
-                            "required": false
-                        },
-                        {
-                            "id": "items.avatar",
-                            "key": "9ae4a6cc-7d20-4ae9-8bc0-33b2452502ca",
-                            "type": "string",
-                            "format": "image",
-                            "label": "صورة العميل",
-                            "description": "المقاس المناسب للصورة هو 68*68 بكسل",
-                            "labelHTML": null,
-                            "placeholder": "e.g. https://hostname.com/image.png",
-                            "icon": "sicon-image",
-                            "value": null,
-                            "required": true
-                        },
-                        {
-                            "id": "items.stars",
-                            "type": "number",
-                            "format": "integer",
-                            "label": "عدد النجوم",
-                            "description": null,
-                            "key": "f0caf793-88f8-4178-b1cc-a7ace5c09ff6",
-                            "labelHTML": "من 1 إلى 5",
-                            "placeholder": "القيمة",
-                            "icon": "sicon-pencil-ruler",
-                            "value": 5,
-                            "required": false,
-                            "minimum": 1,
-                            "maximum": 5
-                        },
-                        {
-                            "id": "items.text",
-                            "key": "0d474cc4-39f6-4495-8e24-a8eb10d4bbab",
-                            "type": "string",
-                            "format": "textarea",
-                            "label": "نص التقييم",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "نص التقييم",
-                            "icon": "sicon-format-text-alt",
-                            "value": null,
-                            "multilanguage": true,
-                            "required": false
-                        }
-                    ],
-                    "required": false,
-                    "minLength": 1,
-                    "maxLength": 30
-                }
-            ]
         }
     ],
     "support_url": null,
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": "قالب متجر سنمار التعمير للأدوات الصحية والكهرباء ومواد البناء",
+        "en": "Sanmar store theme"
     }
 }
