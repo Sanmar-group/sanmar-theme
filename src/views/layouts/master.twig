@@ -175,5 +175,6 @@
 {% endif %}
 {% block scripts %}{% endblock %}
 <a class="sm-fab" href="https://wa.me/966555792430" target="_blank" rel="noopener" aria-label="واتساب"><svg class="sm-i " aria-hidden="true"><use href="#i-wa"/></svg></a>
+{% if not is_page('product.single') %}<nav class="sm-mobar" aria-label="Mobile navigation"><a href="{{ link('/') }}"><svg class="sm-i" aria-hidden="true"><use href="#i-home"/></svg><span>الرئيسية</span></a><a role="button" onclick="var t=document.querySelector('[data-testid=store-header-mobile-toggle]');if(t){t.click();}return false;"><svg class="sm-i" aria-hidden="true"><use href="#i-grid"/></svg><span>الأقسام</span></a><a href="{{ link('cart') }}"><svg class="sm-i" aria-hidden="true"><use href="#i-cart"/></svg><span>السلة</span></a><a href="{{ link('customer/profile') }}"><svg class="sm-i" aria-hidden="true"><use href="#i-user"/></svg><span>حسابي</span></a></nav><script>document.body.classList.add('sm-has-mobar');</script>{% endif %}
 </body>
 </html>
