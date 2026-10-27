@@ -139,7 +139,6 @@ html[dir=ltr] .sm-fab{left:auto;right:16px}
 @media(max-width:800px){.sm-hero__main{grid-template-columns:1fr}.sm-hero__text{padding:32px 24px 0}.sm-vis{padding:24px;min-height:0}.sm-pill{max-height:130px}.sm-ws,.sm-tiles,.sm-gd,.sm-faq,.sm-hero__side{grid-template-columns:1fr}.sm-ws__l{padding:32px 24px}.sm-ws__r{padding:0 24px 32px}.container--product-details .main-content{padding:18px}}
 @media(max-width:560px){.sm-feat{grid-template-columns:1fr}.sm-ws ul{grid-template-columns:1fr}.sm-card{min-height:0}.sm-fab{bottom:76px}}
 
-
 /* ===================================================================
    PAGES LAYER — product, category, info pages, blog, brands, cart,
    account, orders, loyalty, thank-you, modals, mobile bar
@@ -283,6 +282,9 @@ salla-cart-summary-card,salla-cart-coupons,salla-loyalty-panel{display:block}
 .loyalty-points,.loyalty-star{color:var(--sm-aqua)!important}
 .thank-you-content{background:#fff;border:1px solid var(--sm-line);border-radius:28px;box-shadow:var(--sm-sh2);padding:30px}
 .s-reviews-testimonial{background:#fff;border:1px solid var(--sm-line);border-radius:22px}
+/* ---------- footer inner bands ---------- */
+.store-footer__inner,.store-footer .store-footer__inner{background:transparent!important;border-style:solid}
+.store-footer,.store-footer>div{background-color:var(--sm-deep)}
 /* ---------- mobile bottom bar ---------- */
 .sm-mobar{display:none}
 @media(max-width:1023px){
